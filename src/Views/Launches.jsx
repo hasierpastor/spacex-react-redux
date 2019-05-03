@@ -6,6 +6,7 @@ import RocketService from '../Services/RocketService';
 
 const LaunchesView = props => {
   const [isLoading, setLoading] = useState(true);
+  console.log(isLoading);
 
   useEffect(() => {
     props.getLaunches();

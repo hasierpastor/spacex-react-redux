@@ -9,11 +9,9 @@ const Launch = props => {
 
   return (
     <div>
-      <Link onClick={getData} to=" ">
-        {' '}
-        {mission_name}{' '}
-      </Link>
+      <h2>{mission_name}</h2>
       <p> {rocket.rocket_name} </p>
+      <Button click={getData} />
     </div>
   );
 };
