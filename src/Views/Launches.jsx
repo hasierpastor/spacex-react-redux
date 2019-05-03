@@ -22,21 +22,19 @@ const LaunchesView = props => {
 
   const { errored, launches } = props;
 
-  let content;
-
   if (isLoading) {
-    content = <Loading />;
+    return <Loading />;
   }
 
   if (errored) {
-    content = (
+    return (
       <p>
         Sorry! There was an error loading the launches. Please try again later
       </p>
     );
   }
 
-  content = launches.map(launch => {
+  const content = launches.map(launch => {
     return <Launch {...launch} getRocketData={getRocketData} />;
   });
 

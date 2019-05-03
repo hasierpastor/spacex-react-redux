@@ -8,20 +8,20 @@ const Rocket = props => {
   const { name, description, images, height, engine, mass, country } = props;
 
   let imageContent = images.map(image => (
-    <img src={image} alt="" className="image" />
+    <img src={image} alt="" className="rocket-image" />
   ));
 
   return (
     <div id="rocket">
       <h2>
         {' '}
-        {name} <FontAwesomeIcon icon="rocket" />{' '}
+        {name} <FontAwesomeIcon icon="rocket" />
       </h2>
       <p> {description} </p>
       <p>Height: {height} ft</p>
       <p>Mass: {mass} lb</p>
       <p>Country: {country}</p>
-      <div id="imageContent">{imageContent}</div>
+      <div>{imageContent}</div>
     </div>
   );
 };
