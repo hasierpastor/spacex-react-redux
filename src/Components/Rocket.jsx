@@ -3,16 +3,20 @@ import React from 'react';
 import '../../styles/_style.sass'; // Css-module styles
 
 const Rocket = props => {
-  const { name, description, images } = props;
-  let imageContent = images.map(image => {
-    return <img src={image} alt="" />;
-  });
+  const { name, description, images, height, engine, mass, country } = props;
+
+  let imageContent = images.map(image => (
+    <img src={image} alt="" className="image" />
+  ));
 
   return (
     <div id="rocket">
       <h2> {name} </h2>
       <p> {description} </p>
-      <div>{imageContent}</div>
+      <p>Height: {height} ft</p>
+      <p>Mass: {mass} lb</p>
+      <p>Country: {country}</p>
+      <div id="imageContent">{imageContent}</div>
     </div>
   );
 };

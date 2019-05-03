@@ -9,7 +9,16 @@ const RocketPage = props => {
   const menu = Navigation({ path: '/launches', title: 'Launches' });
 
   let dataObject = JSON.parse(props.location.state.rocketData);
-  const { rocket_name, description, flickr_images } = dataObject.data;
+  const {
+    rocket_name,
+    description,
+    flickr_images,
+    engines,
+    height,
+    mass,
+    country
+  } = dataObject.data;
+  console.log(dataObject.data);
 
   return (
     <Layout menu={menu} pageName="rockets">
@@ -17,6 +26,9 @@ const RocketPage = props => {
         name={rocket_name}
         description={description}
         images={flickr_images}
+        mass={mass.lb}
+        height={height.feet}
+        country={country}
       />
     </Layout>
   );
