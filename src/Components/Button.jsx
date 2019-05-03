@@ -4,7 +4,7 @@ import '../../styles/_style.sass'; // Css-module styles
 
 const Button = props => (
   <button onClick={props.click} class="btn btn-white ">
-    See Details
+    {props.text}
   </button>
 );
 

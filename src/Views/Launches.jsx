@@ -6,7 +6,6 @@ import RocketService from '../Services/RocketService';
 
 const LaunchesView = props => {
   const [isLoading, setLoading] = useState(true);
-  console.log(isLoading);
 
   useEffect(() => {
     props.getLaunches();
@@ -23,21 +22,27 @@ const LaunchesView = props => {
 
   const { errored, launches } = props;
 
+  let content;
+
   if (isLoading) {
-    return <Loading />;
+    content = <Loading />;
   }
 
   if (errored) {
-    return <p>Sorry! There was an error loading the items</p>;
+    content = (
+      <p>
+        Sorry! There was an error loading the launches. Please try again later
+      </p>
+    );
   }
 
-  const content = launches.map(launch => {
+  content = launches.map(launch => {
     return <Launch {...launch} getRocketData={getRocketData} />;
   });
 
   return (
     <div>
-      <h2> SpaceX launches </h2>
+      <h2> SpaceX Launches </h2>
       {content}
     </div>
   );
