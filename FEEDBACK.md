@@ -47,7 +47,7 @@ These are some fixes I think improved the app code => I also tried to follow som
 - Performance:
 
   - image optimization and performance - lazy load images (although they were loading very fast)
-  - paginate list?
+  - maybe paginate launches list
   - measure performance of app using auditing tools/Lightouse
 
 ### Other notes
