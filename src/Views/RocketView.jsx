@@ -18,7 +18,6 @@ const RocketPage = props => {
     mass,
     country
   } = dataObject.data;
-  console.log(dataObject.data);
 
   return (
     <Layout menu={menu} pageName="rockets">

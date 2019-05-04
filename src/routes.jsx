@@ -2,8 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Loading from './Components/Loading';
 
-const Launches = lazy(() => import('./Views/Launches'));
-const RocketPage = lazy(() => import('./Views/RocketPage'));
+const Launches = lazy(() => import('./Views/LaunchesView'));
+const RocketPage = lazy(() => import('./Views/RocketView'));
 
 const Routes = () => (
   <Router>

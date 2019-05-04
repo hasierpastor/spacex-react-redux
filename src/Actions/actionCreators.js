@@ -12,13 +12,10 @@ function launchesErrored(bool) {
   return { type: LAUNCHES_ERRORED, hasErrored: bool };
 }
 
-// eslint-disable-next-line import/prefer-default-export
 export function getLaunches() {
   return function(dispatch) {
-    LaunchService.get()
-      .then(r => {
-        return r;
-      })
+    return LaunchService.get()
+      .then(r => r)
       .then(r => {
         dispatch(receiveLaunches(r.data));
       })
