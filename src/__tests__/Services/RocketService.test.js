@@ -1,5 +1,5 @@
 import expect from 'expect';
-import RocketService from './RocketService';
+import RocketService from '../../Services/RocketService';
 
 const axios = require('axios');
 const MockAdapter = require('axios-mock-adapter');

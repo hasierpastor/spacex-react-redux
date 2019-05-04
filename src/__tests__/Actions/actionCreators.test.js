@@ -1,8 +1,8 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import expect from 'expect'; // You can use any testing library
-import { getLaunches } from './actionCreators';
-import { RECEIVE_LAUNCHES, LAUNCHES_ERRORED } from './actionTypes';
+import { getLaunches } from '../../Actions/actionCreators';
+import { RECEIVE_LAUNCHES, LAUNCHES_ERRORED } from '../../Actions/actionTypes';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

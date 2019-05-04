@@ -1,5 +1,5 @@
-import LaunchCollectionReducer from './LaunchCollectionReducer';
-import { RECEIVE_LAUNCHES, LAUNCHES_ERRORED } from '../Actions/actionTypes';
+import LaunchCollectionReducer from '../../Store/LaunchCollectionReducer';
+import { RECEIVE_LAUNCHES, LAUNCHES_ERRORED } from '../../Actions/actionTypes';
 
 describe('launch collection reducer', () => {
   it('should return the initial state', () => {
