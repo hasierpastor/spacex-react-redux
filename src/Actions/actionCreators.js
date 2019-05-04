@@ -1,5 +1,5 @@
 import LaunchService from '../Services/LaunchService';
-import { RECEIVE_LAUNCHES, LAUNCHES_ERRORED } from './actionTypes';
+import { RECEIVE_LAUNCHES, LAUNCHES_ERRORED } from './ActionTypes';
 
 function receiveLaunches(launches) {
   return {

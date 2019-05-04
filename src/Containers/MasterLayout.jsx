@@ -1,7 +1,7 @@
 import React from '../../node_modules/react';
 import { connect } from '../../node_modules/react-redux';
 import Navigation from '../Components/Navigation';
-import { getLaunches } from '../Actions/actionCreators';
+import { getLaunches } from '../Actions/ActionCreators';
 import Layout from '../Views/Layout';
 
 const menu = Navigation({ path: '/launches', title: 'Launches' });

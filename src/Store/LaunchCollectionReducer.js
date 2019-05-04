@@ -1,4 +1,4 @@
-import { RECEIVE_LAUNCHES, LAUNCHES_ERRORED } from '../Actions/actionTypes';
+import { RECEIVE_LAUNCHES, LAUNCHES_ERRORED } from '../Actions/ActionTypes';
 
 const INITIAL_STATE = {
   launches: [],

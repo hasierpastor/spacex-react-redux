@@ -1,8 +1,8 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import expect from 'expect'; // You can use any testing library
-import { getLaunches } from '../../Actions/actionCreators';
-import { RECEIVE_LAUNCHES, LAUNCHES_ERRORED } from '../../Actions/actionTypes';
+import { getLaunches } from '../../Actions/ActionCreators';
+import { RECEIVE_LAUNCHES } from '../../Actions/ActionTypes';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
@@ -18,14 +18,14 @@ const mockLaunches = [
   { rocket_id: 3, mission_name: 'Test3', launch_year: 2018 }
 ];
 
-describe('async actions', () => {
+describe('getLaunches thunk', () => {
   beforeEach(() => {
     mock
       .onGet('https://api.spacexdata.com/v3/launches')
       .reply(200, mockLaunches);
   });
 
-  it('creates correct actions when getting launches', () => {
+  it('creates correct action when receives launches', () => {
     const expectedActions = [
       { type: RECEIVE_LAUNCHES, launches: mockLaunches }
     ];
