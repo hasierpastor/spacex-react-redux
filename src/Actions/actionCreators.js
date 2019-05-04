@@ -12,6 +12,10 @@ function launchesErrored(bool) {
   return { type: LAUNCHES_ERRORED, hasErrored: bool };
 }
 
+/**
+ * Functions that makes request to Space X api to get launches
+ * If request successful then dispatch receiveLaunches action, otherwise dispatch launchesErrored action
+ */
 export function getLaunches() {
   return function(dispatch) {
     return LaunchService.get()

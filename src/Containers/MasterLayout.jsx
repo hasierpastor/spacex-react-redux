@@ -6,6 +6,9 @@ import Layout from '../Views/Layout';
 
 const menu = Navigation({ path: '/launches', title: 'Launches' });
 
+/**
+ * Connected component => get state and getLaunches action from redux store and actionCreators
+ */
 function MasterLayoutHOC(WrappedComponent, pageName) {
   const MasterLayoutImpl = props => {
     const layoutProps = {

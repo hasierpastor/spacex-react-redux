@@ -4,14 +4,19 @@ import Launch from '../Components/Launch';
 import Loading from '../Components/Loading';
 import RocketService from '../Services/RocketService';
 
+/**
+ * Launches View component is in charge of getting launches from redux store and displaying list of launches
+ */
 const LaunchesView = props => {
   const [isLoading, setLoading] = useState(true);
 
+  //useEffect gets launches from redux and sets isLoading to false one complete => this will update state to render list
   useEffect(() => {
     props.getLaunches();
     setLoading(false);
   });
 
+  //function that takes in rocket id and makes call to Space X api to get data => then push user to rocket page to see data
   const getRocketData = id => {
     RocketService.get(id)
       .then(r => JSON.stringify(r))
@@ -22,10 +27,12 @@ const LaunchesView = props => {
 
   const { errored, launches } = props;
 
+  //if state isLoading display loading component
   if (isLoading) {
     return <Loading />;
   }
 
+  //if redux state errored property is true then display error message
   if (errored) {
     return (
       <p>
@@ -34,6 +41,7 @@ const LaunchesView = props => {
     );
   }
 
+  //map through launches array (from redux state) and create a list of Launch components
   const content = launches.map(launch => {
     return <Launch {...launch} getRocketData={getRocketData} />;
   });

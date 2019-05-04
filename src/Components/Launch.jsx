@@ -3,6 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from './Button';
 import { Link } from '../../node_modules/react-router-dom';
 
+/***
+ * Launch component displays launch data and button
+ * onClick push user to /rockets/id page where rocket info will be displayed
+ */
 const Launch = props => {
   const { mission_name, rocket, getRocketData } = props;
 
@@ -11,7 +15,7 @@ const Launch = props => {
   return (
     <div>
       <h2>{mission_name}</h2>
-      <p>{rocket.rocket_name} </p>
+      <p>Rocket name: {rocket.rocket_name} </p>
       <Button click={getData} text="See Rocket Details!" />
     </div>
   );

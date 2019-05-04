@@ -5,7 +5,12 @@ import Rocket from '../Components/Rocket';
 
 import '../../styles/_style.sass'; // Css-module styles
 
-const RocketPage = props => {
+/**
+ * RocketView component is in charge of returning Rocket component
+ * Gets data to pass down from props.location (passed through history)
+ * Wrapped in layout component
+ */
+const RocketView = props => {
   const menu = Navigation({ path: '/launches', title: 'Launches' });
 
   let dataObject = JSON.parse(props.location.state.rocketData);
@@ -33,4 +38,4 @@ const RocketPage = props => {
   );
 };
 
-export default RocketPage;
+export default RocketView;

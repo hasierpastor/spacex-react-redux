@@ -5,6 +5,9 @@ const INITIAL_STATE = {
   errored: false
 };
 
+/**
+ * Reducer => takes in state and actions and returns new redux state
+ */
 export default function launchCollection(state = INITIAL_STATE, action) {
   switch (action.type) {
     case LAUNCHES_ERRORED:

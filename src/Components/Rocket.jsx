@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import '../../styles/_style.sass'; // Css-module styles
 
+/**
+ * Rocket component displays rocket info and images
+ */
 const Rocket = props => {
   const { name, description, images, height, engine, mass, country } = props;
 
