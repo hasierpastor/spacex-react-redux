@@ -4,7 +4,6 @@ import { AppContainer } from 'react-hot-loader';
 
 import { Provider } from 'react-redux';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
 import store from './Store/Root';
 

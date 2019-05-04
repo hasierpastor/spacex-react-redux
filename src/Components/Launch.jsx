@@ -1,7 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from './Button';
-import { Link } from '../../node_modules/react-router-dom';
 
 /***
  * Launch component displays launch data and button

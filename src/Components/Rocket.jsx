@@ -2,7 +2,9 @@ import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import '../../styles/_style.sass'; // Css-module styles
+import '../../styles/_style.sass';
+// Css-module styles
+const uuidv4 = require('uuid/v1');
 
 /**
  * Rocket component displays rocket info and images
@@ -10,8 +12,8 @@ import '../../styles/_style.sass'; // Css-module styles
 const Rocket = props => {
   const { name, description, images, height, engine, mass, country } = props;
 
-  let imageContent = images.map(image => (
-    <img src={image} alt="" className="rocket-image" />
+  const imageContent = images.map((image, idx) => (
+    <img key={uuidv4()} src={image} alt="" className="rocket-image" />
   ));
 
   return (

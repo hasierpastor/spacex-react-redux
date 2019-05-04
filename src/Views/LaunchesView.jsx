@@ -4,6 +4,8 @@ import Launch from '../Components/Launch';
 import Loading from '../Components/Loading';
 import RocketService from '../Services/RocketService';
 
+const uuidv4 = require('uuid/v1');
+
 /**
  * Launches View component is in charge of getting launches from redux store and displaying list of launches
  */
@@ -32,7 +34,7 @@ const LaunchesView = props => {
     return <Loading />;
   }
 
-  //if redux state errored property is true then display error message
+  //if redux state error property is true then display error message
   if (errored) {
     return (
       <p>
@@ -43,7 +45,7 @@ const LaunchesView = props => {
 
   //map through launches array (from redux state) and create a list of Launch components
   const content = launches.map(launch => {
-    return <Launch {...launch} getRocketData={getRocketData} />;
+    return <Launch {...launch} getRocketData={getRocketData} key={uuidv4()} />;
   });
 
   return (
